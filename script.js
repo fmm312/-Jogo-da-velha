@@ -1,5 +1,8 @@
-$(document).ready(function() {
-            
+$(document).ready(function() { 
+           
+         window.scrollReveal = new scrollReveal();
+
+
         //atribuicao de valores aos botoes atraves de parametros        
           function casasIguais(x, y, z) {            
             var valorBotaoX = $("#btn" + x).text();
@@ -7,11 +10,11 @@ $(document).ready(function() {
             var valorBotaoZ = $("#btn" + z).text();            
            
             
-            if ((valorBotaoX == valorBotaoY) && (valorBotaoY == valorBotaoZ) && (valorBotaoX  != "none" &&          valorBotaoX  != "")) {
+            if ((valorBotaoX == valorBotaoY) && (valorBotaoY == valorBotaoZ) && (valorBotaoX  != "none" &&  valorBotaoX  != "")) {
                 if(valorBotaoX=="X" && valorBotaoY=="X" && valorBotaoZ=="X")
-                    vencedor = player1;               
+                    vencedor = "Jogador 1";               
                 else
-                    vencedor = player2;
+                    vencedor = "Jogador 2";
                 return true;
             }else {
              return false;
@@ -25,7 +28,7 @@ $(document).ready(function() {
               casasIguais(1, 4, 7) || casasIguais(2, 5, 8) || casasIguais(3, 6, 9) ||
               casasIguais(1, 5, 9) || casasIguais(3, 5, 7)
             ) {
-              $("#jogador").text(vencedor + " venceu !");                
+              $("#jogador").text("O " + vencedor + " venceu !");                
               $(".botao").prop("disabled",true);    
                 
             }
@@ -42,18 +45,18 @@ $(document).ready(function() {
                 $(this)
                     .text("X")
                     .css("color","#EEDA76");
-                jogador = player2;
+                jogador = "Jogador 2";
                 vez=2;
 
               } else {
                 $(this)
                     .text("O")
                     .css("color","#39ABD9");
-                jogador = player1;
+                jogador = "Jogador 1";
                 vez=1;
               }
                 
-              $("#jogador").text(jogador + " preparando a jogada...");               
+              $("#jogador").text("É a vez do " + jogador);               
                
               verificarVencedor();
             }
@@ -63,33 +66,8 @@ $(document).ready(function() {
         });
         
                         
-    //Efeitos para mostrar tabuleiro ao clicar em Play 
-      $(".play").click(function(){
-          player1 = $(".jogador1").val();
-          player2 = $(".jogador2").val();
-          
-          if($(".jogador1").val()==""){
-              alert("O jogador 1 deve informar o nome");
-              return false;
-          
-          }else if($(".jogador2").val()==""){
-              alert("O jogador 2 deve informar o nome");
-              return false;
-          
-          }else{
-              $("#jogador").text(player1 + " preparando a jogada...");
-              $(this).css("display","none");
-              $(".formulario").css("display","none");             
-              $(".cliqueComecar").css("display","none");
-              $(".titulo").css("display","none");
-              $(".container-fluid").fadeIn("3000");
-              $(".legenda1, .legenda2, .x, .o").fadeIn("3000");             
-              $(".legenda1").text(player1 + " = ");
-              $(".legenda2").text(player2 + " = ");              
-              
-              return true;
-          }
-      });  
+    //Mensagem inicial do game 
+    $("#jogador").text("É a vez do jogador 1");    
        
         
         
@@ -98,14 +76,13 @@ $(document).ready(function() {
           var x;
           for(x=1 ; x<=9 ; x++){
              $("#btn"+x).text("");
-             $("#jogador").text(player1 + " preparando a jogada...");
+             $("#jogador").text("É a vez do jogador 1");
              $(".botao").prop("disabled",false);   
           }
       });
         
-        
-    //Resetar game
-        $(".newGame").click(function(){
-            location.reload();
-        });
-        
+   
+
+
+    
+   
