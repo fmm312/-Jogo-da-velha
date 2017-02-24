@@ -1,10 +1,11 @@
-$(document).ready(function() {      
-        
+$(document).ready(function() {
+
         //atribuicao de valores aos botoes atraves de parametros        
           function casasIguais(x, y, z) {            
             var valorBotaoX = $("#btn" + x).text();
             var valorBotaoY = $("#btn" + y).text();
-            var valorBotaoZ = $("#btn" + z).text();          
+            var valorBotaoZ = $("#btn" + z).text();            
+           
             
             if ((valorBotaoX == valorBotaoY) && (valorBotaoY == valorBotaoZ) && (valorBotaoX  != "none" &&  valorBotaoX  != "")) {
                 if(valorBotaoX=="X" && valorBotaoY=="X" && valorBotaoZ=="X")
@@ -56,13 +57,15 @@ $(document).ready(function() {
                
               verificarVencedor();
             }
+
           });
+
         });
         
                         
     //Mensagem inicial do game 
-    $("#jogador").text("É a vez do jogador 1");       
-        
+    $("#jogador").text("É a vez do jogador 1");
+
         
     //Limpar tabuleiro        
       $(".clean").click(function(){
