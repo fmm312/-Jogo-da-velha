@@ -8,3 +8,5 @@ Projeto desenvolvido usando as seguintes tecnologias:
 - Bootstrap
 - Javascript 
 - JQuery
+
+<a href="https://fmm312.github.io/Jogo-da-velha/">Acessar</a>
