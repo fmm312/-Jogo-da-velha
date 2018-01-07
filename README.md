@@ -1,4 +1,4 @@
-# -Jogo-da-velha
+# Jogo-da-velha
 
 Projeto desenvolvido usando as seguintes tecnologias: 
 - HTML
