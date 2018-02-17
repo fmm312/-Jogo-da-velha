@@ -1,4 +1,4 @@
-# Jogo-da-velha
+# Jogo da velha
 
 Projeto desenvolvido usando as seguintes tecnologias: 
 - HTML
@@ -6,3 +6,9 @@ Projeto desenvolvido usando as seguintes tecnologias:
 - Bootstrap
 - Javascript 
 - jQuery
+
+
+---------------
+
+
+Criado por **Felipe Menezes Magalhães**
